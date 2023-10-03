@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("../partials/head"); %>
+</head>
+<body>
+  <center>
+    <h1><%= title %></h1>
+  </center>
+
+  <ul class="project-list">
+    <% projects.forEach(project => { %>
+      <li>
+        <h2><%= project.title %></h2>
+        <p><%= project.description %></p>
+      </li>
+    <% }) %>
+  </ul>
+
+  <center>
+    <a href="/">Home</a> 
+    
+  </center>
+</body>
+</html>

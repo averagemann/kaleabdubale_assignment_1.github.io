@@ -10,8 +10,11 @@ app.use(express.static('public'));
 
 // Define routes for your pages
 app.get("/", (req, res) => {
-  res.render("pages/home"); // Update to your home page EJS file
+  res.render("pages/home", {
+    title: "Welcome to My Website",
+  });
 });
+
 
 app.get("/about", (req, res) => {
   // Passing data to the view
@@ -25,7 +28,6 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/projects", (req, res) => {
-  // Passing data to the view
   res.render("pages/projects", {
     title: "Projects",
     projects: [
@@ -42,8 +44,8 @@ app.get("/projects", (req, res) => {
   });
 });
 
+
 app.get("/services", (req, res) => {
-  // Passing data to the view
   res.render("pages/services", {
     title: "Services",
     services: [
@@ -60,6 +62,7 @@ app.get("/services", (req, res) => {
   });
 });
 
+
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
     title: "Contact Me",
@@ -70,6 +73,7 @@ app.get("/contact", (req, res) => {
     },
   });
 });
+
 
 // Start the server
 app.listen(port, () => {
