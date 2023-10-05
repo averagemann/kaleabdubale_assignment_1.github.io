@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include("../partials/head"); %>
-</head>
-<body>
-  <center>
-    <h1><%= title %></h1>
-  </center>
-
-  <ul class="project-list">
-    <% projects.forEach(project => { %>
-      <li>
-        <h2><%= project.title %></h2>
-        <p><%= project.description %></p>
-      </li>
-    <% }) %>
-  </ul>
-
-  <center>
-    <a href="/">Home</a> 
-    
-  </center>
+    <head>
+        <%- include("../partials/head"); %>
+      </head>
+      <body>
+        <header>
+          <nav class="navbar">
+            <img src="/images/Custom Logo.jpg" alt="Logo" class="logo">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+            <section class="content"> 
+                <h1><%= title %></h1>
+              
+            
+              <ul class="project-list">
+                <% projects.forEach(project => { %>
+                  <li>
+                    <h2><%= project.title %></h2>
+                    <p><%= project.description %></p>
+                  </li>
+                <% }) %>
+              </ul>
+            
+                    </section>
+        </main>
+      
+        
 </body>
 </html>

@@ -62,7 +62,6 @@ app.get("/services", (req, res) => {
   });
 });
 
-
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
     title: "Contact Me",
