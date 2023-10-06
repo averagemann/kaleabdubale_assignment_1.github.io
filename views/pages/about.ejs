@@ -1,15 +1,22 @@
+<!-- File Name: about.ejs
+Student's Name: Kaleab Dubale
+Student ID: 301190854
+Date: October 12, 2023 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!-- Include the head partial for common HTML head elements -->
   <%- include("../partials/head"); %>
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <img src="/images/Custom Logo.jpg" alt="Logo" class="logo">
+      <!-- Logo image -->
+      <img src="CustomLogo.jpg" alt="Logo">
       <ul>
+        <!-- Navigation links -->
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/projects">Projects</a></li>
@@ -22,17 +29,21 @@
   <main>
     <section class="content">
       <h1><%= title %></h1>
-      <p>Welcome to my website. Here, you can find information about me and my projects.</p>
+
+      <p>Welcome to my website. Here, you can find information about me.</p>
 
       <ol>
+        <!-- Loop through details and display them -->
         <% details.forEach(detail => { %>
         <br>
         <li><%= detail %></li>
         <% }) %>
       </ol>
 
-
-
+      <!-- Display an image of you -->
+      <img src="me.png" alt="picture of me"> <br>
+      <!-- Link to your resume PDF -->
+      <a href="kaleab resume copy.pdf" target="_blank">resume PDF</a>
     </section>
   </main>
 </body>

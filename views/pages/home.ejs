@@ -1,13 +1,20 @@
+<!-- File Name: home.ejs
+Student's Name: Kaleab Dubale
+Student ID: 301190854
+Date: October 12, 2023 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Include the head partial for common HTML head elements -->
   <%- include("../partials/head"); %>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <img src="/images/Custom Logo.jpg" alt="Logo" class="logo">
+      <!-- Logo image -->
+      <img src="Custom Logo.jpg" alt="Logo" class="logo">
       <ul>
+        <!-- Navigation links -->
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/projects">Projects</a></li>
@@ -20,6 +27,12 @@
   <main>
     <section class="content">
       <h1><%= title %></h1>
+    
+      <!-- Iterate through details and display each one -->
+      <% details.forEach(detail => { %>
+        <br>
+        <%= detail %>
+      <% }) %>
 
     </section>
   </main>

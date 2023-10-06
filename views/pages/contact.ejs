@@ -1,37 +1,61 @@
+<!-- File Name: contact.ejs
+Student's Name: Kaleab Dubale
+Student ID: 301190854
+Date: October 12, 2023 -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("../partials/head"); %>
-      </head>
-      <body>
-        <header>
-          <nav class="navbar">
-            <img src="/images/Custom Logo.jpg" alt="Logo" class="logo">
+<head>
+    <!-- Include the head partial for common HTML head elements -->
+    <%- include('partials/head') %>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Logo image -->
+            <img src="Custom Logo.jpg" alt="Logo" class="logo">
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/contact">Contact</a></li>
+                <!-- Navigation links -->
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
-          </nav>
-        </header>
-        <main>
-
-        </main>
-        <section class="content"> 
+        </nav>
+    </header>
+    <main>
+        <section class="content">
             <h1><%= title %></h1>
+            <p>Feel free to reach out to me using any of the methods below:</p>
+            <form action="/contact" method="post">
+                <!-- Input fields for first name, last name, contact number, email, and message -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
 
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
 
-            <div class="contact-info">
-              <p>Email: <%= contactInfo.email %></p>
-              <p>Phone: <%= contactInfo.phone %></p>
-              <p>Address: <%= contactInfo.address %></p>
-            </div>
-          
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Send Message</button>
+            </form>
             <br>
-          
+            <ol>
+                <!-- Display contact information with email, phone, and address -->
+                <li><a href="mailto:<%= contactInfo.email %>">Email: <%= contactInfo.email %></a></li>
+                <li><a href="tel:<%= contactInfo.phone %>">Phone: <%= contactInfo.phone %></a></li>
+                <li><a href="https://maps.google.com/?q=<%= encodeURIComponent(contactInfo.address) %>">Address: <%= contactInfo.address %></a></li>
+            </ol>
+            <br>
         </section>
-  
+    </main>
 </body>
 </html>
