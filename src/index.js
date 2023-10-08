@@ -43,16 +43,21 @@ app.get("/projects", (req, res) => {
       // Functionality: Providing details about each project
       {
         title: "Project 1",
-        description: "Description of Project 1.",
+        description: "this was my first web page it was not amazing but it is what i started with and i am proud of it.",
         
       },
       {
         title: "Project 2",
-        description: "Description of Project 2.",
-      },
+        description:"i had made a small contrubution of creating a translation app for a final project of ui smart devices"},
+      
       {
         title: "Project 3",
-        description: "Description of Project 3.",
+        description:  `Created an organized display to showcase individuals’ credit information using SQL scripting in order for an efficient and simple review of their credits including their credit score, history, and credit card information.
+        - Led a team of three in creating a credit bureau program resulting in the successful development and implementation of the program within the timeline.
+        - Collaborated with team members and clients to gather requirements and ensure alignment with project goals resulting in high levels of satisfaction and successful adoption of the program.
+        - Collaborated with team members to define project goals and scope resulting in a clear understanding and alignment of project objectives among team members.
+        - Presented the program to the class and received positive feedback resulting in high grades and recognition from the instructor.`
+     
       }, 
     ],
   });

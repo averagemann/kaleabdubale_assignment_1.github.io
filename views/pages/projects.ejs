@@ -20,14 +20,17 @@ Date: October 12, 2023 -->
             <ul class="project-list">
                 <!-- Iterate through the projects and display each one -->
                 <% projects.forEach(project => { %>
-                    <li> 
+                    <ol> <% var imageSource = "/images/" + project.title + ".png"; %>
+                        <img src="<%= imageSource %>" width="500" height="500">
                         <h2><%= project.title %> </h2>
                         <div class="project-details">
                             <p><%= project.description %></p>
                         </div>
-                    </li>
+                    </ol>
                 <% }) %>
             </ul>
+             <a href="database final project.pdf" target="_blank">database final project PDF</a><br>
+             <a href="ui smart devices final project.pdf" target="_blank">ui smart devices final project PDF</a>
             
         </section>
     </main>
