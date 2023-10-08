@@ -1,0 +1,120 @@
+/* Global Styles for the Page */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+  }
+  
+  /* Set a background color and default font for the entire page */
+  body {
+    background-color: #004d00;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Global Header Styles */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px; /* Increased top and bottom padding for a taller navigation bar */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Header Logo Styles */
+  header img {
+    width: 200px; /* Set the width of the logo image */
+    height: 200px; /* Set the height of the logo image */
+    display: block; /* Make the image a block element for centering */
+    margin-left: 10px ; /* Center-align the logo horizontally */
+  }
+  
+  /* Header Navigation Styles */
+  .navbar ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Add some space between list items */
+  }
+  
+  /* Styling for navigation links */
+  .navbar ul li a {
+    color: white; /* Text color for links in the header */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold; /* Make links bold */
+  }
+  
+  /* Hover effect for navigation links */
+  .navbar ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Style the main content section */
+  main {
+    padding: 20px;
+  }
+  
+  .content {
+    background-color: #c45252;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+  }
+  
+  /* Style headings and paragraphs */
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the logo image */
+  .logo {
+    margin-right: 10px; /* Add space to the right of the logo */
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer content */
+    padding: 20px 0; /* Padding at the top and bottom of the footer */
+    text-align: center; /* Center-align the content in the footer */
+  }
+  
+  .footer-content {
+    max-width: 1200px; /* Set a maximum width for the footer content */
+    margin: 0 auto; /* Center-align the footer content horizontally */
+  }
+  
+  .footer-content p {
+    font-size: 20px; /* Font size for text in the footer */
+  }
+  
+  .footer-content ul {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0;
+  }
+  
+  .footer-content ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 10px; /* Add some space between list items */
+  }
+  
+  /* Styling for footer links */
+  .footer-content ul li a {
+    color: #ffffff; /* Text color for links in the footer */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold; /* Make links bold */
+  }
+  
+  /* Hover effect for footer links */
+  .footer-content ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

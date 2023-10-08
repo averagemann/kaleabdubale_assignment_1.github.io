@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 3000; // Change to your desired port number
+const port = 3001; // Change to your desired port number
 
 // Setting application's templating engine to EJS
 app.set("view engine", "ejs");
 
 // Serve static files from the 'public' directory
-app.use(express.static(__dirname + '/public'));
+app.use(express.static("public"));
 
 // Define routes for your pages
 
@@ -44,6 +44,7 @@ app.get("/projects", (req, res) => {
       {
         title: "Project 1",
         description: "Description of Project 1.",
+        
       },
       {
         title: "Project 2",

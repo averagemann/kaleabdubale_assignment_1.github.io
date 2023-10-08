@@ -6,23 +6,10 @@ Date: October 12, 2023 -->
 <html lang="en">
 <head>
     <!-- Include the head partial for common HTML head elements -->
-    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <!-- Logo image -->
-            <img src="Custom Logo.jpg" alt="Logo" class="logo">
-            <ul>
-                <!-- Navigation links -->
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include("../partials/header"); %>
     <main>
         <section class="content">
             <h1><%= title %></h1>
@@ -56,6 +43,9 @@ Date: October 12, 2023 -->
             </ol>
             <br>
         </section>
+        
     </main>
+<%- include("../partials/footer"); %>
+
 </body>
 </html>

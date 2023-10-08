@@ -7,28 +7,16 @@ Date: October 12, 2023 -->
 
 <head>
   <!-- Include the head partial for common HTML head elements -->
-  <%- include("../partials/head"); %>
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <!-- Logo image -->
-      <img src="CustomLogo.jpg" alt="Logo">
-      <ul>
-        <!-- Navigation links -->
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<%- include("../partials/header"); %>
+  
   <main>
     <section class="content">
       <h1><%= title %></h1>
+      
 
       <p>Welcome to my website. Here, you can find information about me.</p>
 
@@ -41,11 +29,14 @@ Date: October 12, 2023 -->
       </ol>
 
       <!-- Display an image of you -->
-      <img src="me.png" alt="picture of me"> <br>
+      <img src="/images/me.png" alt="picture of me" width="500" height="600"> <br>
       <!-- Link to your resume PDF -->
       <a href="kaleab resume copy.pdf" target="_blank">resume PDF</a>
+      
     </section>
+
   </main>
 </body>
+<%- include("../partials/footer"); %>
 
 </html>
