@@ -1,0 +1,41 @@
+<!-- File Name: projects.ejs
+Student's Name: Kaleab Dubale
+Student ID: 301190854
+Date: October 12, 2023 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include the head partial for common HTML head elements -->
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+</head>
+
+<body>
+    <%- include("../partials/header"); %>
+    <main>
+        <section class="content">
+            <h1><%= title %></h1>
+            <p>These are some of my past projects:</p>
+            
+            <ul class="project-list">
+                <!-- Iterate through the projects and display each one -->
+                <% projects.forEach(project => { %>
+                    <ol> <% var imageSource = "/images/" + project.title + ".png"; %>
+                        <img src="<%= imageSource %>" width="500" height="500">
+                        <h2><%= project.title %> </h2>
+                        <div class="project-details">
+                            <p><%= project.description %></p>
+                        </div>
+                    </ol>
+                <% }) %>
+            </ul>
+             <a href="database final project.pdf" target="_blank">database final project PDF</a><br>
+             <a href="ui smart devices final project.pdf" target="_blank">ui smart devices final project PDF</a>
+            
+        </section>
+    </main>
+<%- include("../partials/footer"); %>
+
+</body>
+
+</html>
